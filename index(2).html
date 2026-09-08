@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caixa de Ferramentas de Gestão</title>
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --ink:#17324d;
+      --muted:#63758a;
+      --line:#dce5ee;
+      --white:#ffffff;
+      --purple:#7b3fc6;
+      --purple-soft:#f3ebff;
+      --orange:#f2a900;
+      --orange-soft:#fff5d8;
+      --shadow:0 12px 30px rgba(27,49,72,.10);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      background:linear-gradient(180deg,#f8fbff 0%,#eef4fa 100%);
+      color:var(--ink);
+    }
+    .wrap{
+      width:min(1100px,92vw);
+      margin:0 auto;
+      padding:42px 0 28px;
+    }
+    .hero{
+      text-align:center;
+      margin-bottom:28px;
+    }
+    .eyebrow{
+      display:inline-block;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#4b6b88;
+      background:#eaf1f7;
+      padding:7px 11px;
+      border-radius:999px;
+      margin-bottom:14px;
+    }
+    h1{
+      margin:0;
+      font-size:clamp(30px,5vw,48px);
+      line-height:1.05;
+      letter-spacing:-.03em;
+    }
+    .subtitle{
+      max-width:760px;
+      margin:14px auto 0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px;
+      margin-top:34px;
+    }
+    .card{
+      background:var(--white);
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      min-height:330px;
+    }
+    .band{
+      height:10px;
+      width:100%;
+    }
+    .card.pmc .band{background:var(--purple)}
+    .card.w2h .band{background:var(--orange)}
+    .content{
+      padding:26px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+    .icon{
+      width:54px;
+      height:54px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      font-size:28px;
+      margin-bottom:18px;
+    }
+    .pmc .icon{background:var(--purple-soft)}
+    .w2h .icon{background:var(--orange-soft)}
+    h2{
+      margin:0 0 8px;
+      font-size:25px;
+      letter-spacing:-.02em;
+    }
+    .desc{
+      color:var(--muted);
+      line-height:1.55;
+      margin:0 0 18px;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-bottom:22px;
+    }
+    .chip{
+      font-size:12px;
+      font-weight:700;
+      padding:6px 9px;
+      border-radius:999px;
+      background:#f4f7fa;
+      color:#587087;
+      border:1px solid #e3eaf0;
+    }
+    .btn{
+      margin-top:auto;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      text-decoration:none;
+      font-weight:800;
+      padding:13px 16px;
+      border-radius:12px;
+      transition:.18s ease;
+    }
+    .pmc .btn{
+      background:var(--purple);
+      color:#fff;
+    }
+    .w2h .btn{
+      background:var(--orange);
+      color:#332400;
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      filter:brightness(.98);
+    }
+    .note{
+      margin-top:26px;
+      background:#ffffffcc;
+      border:1px dashed #cbd7e2;
+      border-radius:16px;
+      padding:15px 18px;
+      color:#5d7083;
+      text-align:center;
+      font-size:13px;
+      line-height:1.5;
+    }
+    footer{
+      text-align:center;
+      margin-top:24px;
+      color:#8190a0;
+      font-size:11px;
+    }
+    @media(max-width:760px){
+      .wrap{padding-top:26px}
+      .grid{grid-template-columns:1fr}
+      .card{min-height:0}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Recursos educacionais</div>
+      <h1>Caixa de Ferramentas de Gestão</h1>
+      <p class="subtitle">
+        Escolha uma ferramenta para estruturar ideias, organizar projetos
+        e transformar planejamento em ação.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card pmc">
+        <div class="band"></div>
+        <div class="content">
+          <div class="icon">🧩</div>
+          <h2>Project Model Canvas</h2>
+          <p class="desc">
+            Organize visualmente os principais elementos de um projeto:
+            propósito, entregas, pessoas, execução, prazos, riscos e custos.
+          </p>
+          <div class="chips">
+            <span class="chip">Projetos</span>
+            <span class="chip">Planejamento</span>
+            <span class="chip">Visão sistêmica</span>
+          </div>
+          <a class="btn" href="project_model_canvas_final.html">Abrir ferramenta →</a>
+        </div>
+      </article>
+
+      <article class="card w2h">
+        <div class="band"></div>
+        <div class="content">
+          <div class="icon">✅</div>
+          <h2>Plano de Ação 5W2H</h2>
+          <p class="desc">
+            Transforme decisões em ações claras definindo o que será feito,
+            por quê, onde, quando, por quem, como e quanto custará.
+          </p>
+          <div class="chips">
+            <span class="chip">Plano de ação</span>
+            <span class="chip">Execução</span>
+            <span class="chip">Acompanhamento</span>
+          </div>
+          <a class="btn" href="plano_acao_5w2h_ajustado.html">Abrir ferramenta →</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="note">
+      Novas ferramentas poderão ser adicionadas aqui futuramente sem alterar o endereço principal da página.
+    </div>
+
+    <footer>
+      Idealizado por: Prof. Gabriel Velini
+    </footer>
+  </main>
+</body>
+</html>
